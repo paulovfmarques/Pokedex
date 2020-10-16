@@ -6,33 +6,40 @@ import {
   Link
 } from "react-router-dom";
 
-export default function PokemonData(){
+export default function PokemonData(props){    
+   
+
+    const { weight,height,base_experience,types,abilities} = props.info      
+
     return(
         <section className="pokemonData">
             <div className="measure">
                 <div>
                     <p>Peso</p>
-                    <span>130</span>
+                    <span>{weight}</span>
                 </div>
                 <div>
                     <p>Altura</p>
-                    <span>10</span>
+                    <span>{height}</span>
                 </div>
                 <div>
                     <p>Exp. Base</p>
-                    <span>142</span>
+                    <span>{base_experience}</span>
                 </div>                
             </div>
             
             <div className="info">
                 <p>Tipos</p>
-                <span>Grass</span>
-                <span>Poison</span>
+                {types && types.map(({type},i) => {
+                    return (<span key={i} >{type.name}</span>)
+                })}                
             </div>
+
             <div className="info">
                 <p>Habilidades</p>
-                <span>Overgrow</span>
-                <span>Chlorophyll</span>
+                {abilities && abilities.map(({ability},i) => {
+                        return (<span key={i} >{ability.name}</span>)
+                    })}               
             </div>
         </section>
     );

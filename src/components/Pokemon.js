@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Pokemon(props){
@@ -10,7 +10,7 @@ export default function Pokemon(props){
 
     const source = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
     return(        
-            <Link to="/selected">
+            <Link to={`/pokemon/${id}`}>
                 <div className="pokemon">
                     <img src={source} />
                     <h1 className="title">{nameCapitalized}</h1>

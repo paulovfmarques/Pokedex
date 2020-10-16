@@ -3,8 +3,7 @@ import axios from "axios";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route  
 } from "react-router-dom";
 
 import "../../public/styles/reset.css"
@@ -14,7 +13,7 @@ import SelectedPokemon from "./SelectedPokemon"
 
 export default function App(){
 
-    const [arrayPokemon,setArrayPokemon] = useState([]);
+    const [arrayPokemon,setArrayPokemon] = useState();
 
     useEffect(() => {
         const request = axios.get("https://pokeapi.co/api/v2/pokemon?limit=893 ");
@@ -28,12 +27,12 @@ export default function App(){
             <header><img src="./images/Pokédex_logo.png" alt=""/></header>
             <Switch>
 
-                <Route path="/selected">
+                <Route path="/pokemon/:id">
                     <SelectedPokemon />
                 </Route>
 
                 <Route path="/">
-                    <RenderPokemon list={arrayPokemon} />
+                    {arrayPokemon && <RenderPokemon list={arrayPokemon} />}
                 </Route>
 
             </Switch>
