@@ -117,3 +117,7 @@ main{
 .white{
     color:white;
 }
+
+.loading{
+    margin-top:50vh;
+}

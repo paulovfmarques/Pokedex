@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 export default function PokemonList(props){
     
     let idPokemon = props.idPokemon;
-    let name = props.name;
-    // console.log('name:', name)
-    // let nameCapital = (props.name).charAt(0).toUpperCase() + (props.name).slice(1);
+    let name = props.name;    
     
     return(
         <section className="pokemonList">

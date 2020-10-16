@@ -10,15 +10,18 @@ import "../../public/styles/reset.css"
 import "../../public/styles/style.css"
 import RenderPokemon from "./RenderPokemon"
 import SelectedPokemon from "./SelectedPokemon"
+import Loading from "./Loading"
 
 export default function App(){
 
     const [arrayPokemon,setArrayPokemon] = useState();
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         const request = axios.get("https://pokeapi.co/api/v2/pokemon?limit=893 ");
         request.then(response => {
-            setArrayPokemon(response.data.results);          
+            setArrayPokemon(response.data.results);
+            setIsLoading(false)
         })
       }, []);
 
@@ -31,9 +34,11 @@ export default function App(){
                     <SelectedPokemon />
                 </Route>
 
-                <Route path="/">
-                    {arrayPokemon && <RenderPokemon list={arrayPokemon} />}
-                </Route>
+                {isLoading 
+                    ? <Loading />
+                    : <Route path="/"> {arrayPokemon && <RenderPokemon list={arrayPokemon} />} </Route>
+                }
+                
 
             </Switch>
         </Router>

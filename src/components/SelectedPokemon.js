@@ -8,13 +8,13 @@ import PokemonData from "./PokemonData";
 export default function SelectedPokemon(){
 
     let idParam = useParams();
-    const [pokemonInfo,setPokemonInfo] = useState()
-    
+    const [pokemonInfo,setPokemonInfo] = useState();    
     
     useEffect(() => {
         const request = axios.get(`https://pokeapi.co/api/v2/pokemon/${idParam.id}`);
         request.then(response => {                        
             setPokemonInfo(response.data);
+            
         })
       }, [idParam.id]);
 
