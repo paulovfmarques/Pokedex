@@ -1,6 +1,6 @@
 <h1 align="center">
 <br>
-  <img src="https://2.bp.blogspot.com/-UYWddUwOD3U/V4trsKHMrzI/AAAAAAAAACs/tPdekRzFiR4klyCbkNeZV2pIvttksaI1wCK4B/s1600/logo.png" alt="POKEDEX" width="120">
+  <img src="https://2.bp.blogspot.com/-UYWddUwOD3U/V4trsKHMrzI/AAAAAAAAACs/tPdekRzFiR4klyCbkNeZV2pIvttksaI1wCK4B/s1600/logo.png" alt="POKEDEX" width="1200">
 <br>
 <br>
 Pokedex
