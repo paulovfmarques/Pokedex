@@ -1,47 +1,30 @@
-# Projeto #08 - Pokédex
+<h1 align="center">
+<br>
+  <img src="https://2.bp.blogspot.com/-UYWddUwOD3U/V4trsKHMrzI/AAAAAAAAACs/tPdekRzFiR4klyCbkNeZV2pIvttksaI1wCK4B/s1600/logo.png" alt="POKEDEX" width="120">
+<br>
+<br>
+Pokedex
+</h1>
 
-# Descrição
+<p align="center">A little description about your project</p>
 
-Nessa semana você fará seu primeiro projeto React com dados dinâmicos! Você construirá uma Pokédex como uma Single-Page Application, consumindo uma API pública de Pokémon :)
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
+  </a>
+</p>
 
-Repositório de referência: 
+## Features
 
-# Requisitos
+This app features...
 
-- Geral
-    - [ ]  Manipule o HTML usando somente React (sem usar o document nem bibliotecas como jQuery)
-    - [ ]  Seu projeto deverá ser desenvolvido utilizando Git e GitHub
-    - [ ]  Para isso, comece fazendo um **fork** **privado** do projeto de referência:
-    - [ ]  **A cada requisito implementado** faça um commit com uma mensagem descritiva do que você evoluiu. Caso queira dividir um requisito em vários commits, não há problema. Mas evite colocar mais de um requisito no mesmo commit
-- Layout
-    - [ ]  Aplicar layout para mobile, seguindo imagens fornecida (não é necessário implementar um layout para desktop)
-    - [ ]  Topo deve ser fixo
-    - [ ]  Hexadecimal do vermelho: #E44141
-- Lista de Pokémon
-    - [ ]  Ao entrar na página inicial (`"/"`), deverá ser carregada uma lista com todos os Pokémon da API, seguindo o layout fornecido
-        - URL da API para buscar todos os Pokémon: [https://pokeapi.co/api/v2/pokemon?limit=893](https://pokeapi.co/api/v2/pokemon?limit=893)
-    - [ ]  Enquanto a lista está carregando, deve ser exibida uma mensagem de "Carregando" na tela
-    - [ ]  Ao clicar em um Pokémon, o usuário deverá ser encaminhado para a rota `"/pokemon/:id"` em que no lugar de **:id** entre o id do Pokémon conforme retornou da API
-        - Dica: a API não retorna o id explicitamente, porém ela retorna uma URL do Pokémon, e o último parâmetro dessa URL é o id. Para pegar somente o id de dentro dessa string, pesquise pelo método `.split()` e quebre essa string a cada barra (`/`)
-- Página de um Pokémon
-    - [ ]  Ao entrar na página de um Pokémon, deverão ser carregados os dados daquele Pokémon a partir da API e exibidos conforme layout fornecido
-        - URL da API para obter um Pokémon: [https://pokeapi.co/api/v2/pokemon/:id](https://pokeapi.co/api/v2/pokemon/:id), onde :id é o id do Pokémon
-    - [ ]  Enquanto os dados do Pokémon estão carregando, deve ser exibida uma mensagem de "Carregando" na tela
-    - [ ]  Ao clicar em "Voltar", o usuário deve retornar para a página inicial
-    - [ ]  Ao clicar em Próximo/Anterior, o usuário deve ser redirecionado para a página referente ao Pokémon correspondente, seguindo a ordem que vem da API
-        - Para isso, some/subtraia 1 do id do Pokémon
-    - [ ]  Caso o usuário esteja visualizando o primeiro/último Pokémon, trate para não exibir o botão de Próximo/Anterior
+- ⚛️ **React Js** — A JavaScript library for building user interfaces
 
-# Bônus
+## Getting started
 
-- Busca
-    - [ ]  Na tela de listagem de Pokémon, implementar uma busca pelo nome do Pokémon
-    - [ ]  Essa busca pode ser pelo próprio JS (sem mandar nenhum novo request pra API). Basta filtrar a array de Pokémon exibida, verificando se o nome do Pokémon contém a palavra digitada no campo de busca
+Describe here the way to use/install your project
 
-# Layout
 
-![./docs/img/pagina-inicial.png](./docs/img/pagina-inicial.png)
+## License
 
-![./docs/img/pagina-pokemon.png](./docs/img/pagina-pokemon.png)
-
-![./docs/img/bonus-busca.png](./docs/img/bonus-busca.png)
+This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/licenses/MIT) page for details.
